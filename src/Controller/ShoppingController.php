@@ -2,8 +2,9 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\ReferenceRepository;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ShoppingController extends AbstractController
 {
@@ -18,9 +19,13 @@ class ShoppingController extends AbstractController
     /**
      * @Route("/references", name="shopping_reference-list")
      */
-    public function index()
+    public function index(ReferenceRepository $repo)
     {
-        return $this->render('shopping/references.html.twig', []);
+        $references = $repo->findAll();
+
+        return $this->render('shopping/references.html.twig', [
+            "references" => $references,
+        ]);
     }
 
 

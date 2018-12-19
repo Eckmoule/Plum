@@ -3,5 +3,13 @@
 {% block body %}
 
 <h1>Liste des références disponibles</h1>
+{% for reference in references %}
+
+<reference>
+    <h3>{{ reference.name }}</h3>
+</reference>
+
+
+{% endfor %}
 
 {% endblock %}
