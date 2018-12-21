@@ -1,4 +1,4 @@
-# Plum
+<p align="center"> <b> Plum </b> </p>
 
 Shopping and recipe management
 
