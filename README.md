@@ -1,9 +1,8 @@
-<p align="center"> <b> Plum </b> </p>
+<h1> Plum </h1>
 
 Shopping and recipe management
 
-Documentation
-------------
+<h3> Documentation </h3>
 
 This project will try to follow the [semantic versioning][1] principle. 
 
