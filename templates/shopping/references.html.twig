@@ -2,14 +2,27 @@
 
 {% block body %}
 
-<h1>Liste des références disponibles</h1>
-{% for reference in references %}
+<center>
+    <h2>Liste des références disponibles</h2>
+</center>
 
 <reference>
-    <h3>{{ reference.name }}</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reference in references %}
+            <tr>
+                <td>{{ reference.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </reference>
 
 
-{% endfor %}
 
 {% endblock %}
